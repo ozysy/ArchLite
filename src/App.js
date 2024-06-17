@@ -1,6 +1,9 @@
-import React from 'react'
-import { BrowserRouter, Routes,  Route } from 'react-router-dom';
+import React from 'react';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
+// import all components
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 /** import all components */
 import Username from './components/Username';
@@ -12,7 +15,6 @@ import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
 import Main from './components/Main';
 
-
 /** auth middleware */
 import { AuthorizeUser, ProtectRoute } from './middleware/auth';
 
@@ -20,7 +22,7 @@ import { AuthorizeUser, ProtectRoute } from './middleware/auth';
 export default function App() {
   return (
     <main>
-      <BrowserRouter>
+      <BrowserRouter basename="/ArchLite">
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/username" element={<Username />} />
