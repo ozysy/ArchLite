@@ -10,6 +10,7 @@ import Profile from './components/Profile';
 import Recovery from './components/Recovery';
 import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
+import Main from './components/Main';
 
 
 /** auth middleware */
@@ -22,7 +23,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/username" element={<UserName />} />
+          <Route path="/username" element={<Username />} />
           <Route path="/register" element={<Register />} />
           <Route path="/password" element={<ProtectRoute><Password /></ProtectRoute>} />
           <Route path="/profile" element={<AuthorizeUser><Profile /></AuthorizeUser>} />
