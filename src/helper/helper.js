@@ -1,6 +1,6 @@
 import axios from 'axios';
 // import { trusted } from 'mongoose';
-import { jwtDecode } from "jwt-decode";
+import jwtDecode from 'jwt-decode';
 
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
