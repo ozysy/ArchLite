@@ -1,24 +1,25 @@
-import React from 'react';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Routes,  Route } from 'react-router-dom';
 
-// import all components
-import UserName from './components/UserName';
+
+/** import all components */
+import Username from './components/Username';
 import Password from './components/Password';
 import Register from './components/Register';
 import Profile from './components/Profile';
 import Recovery from './components/Recovery';
 import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
-import Main from './components/Main';
 
-// auth middleware
+
+/** auth middleware */
 import { AuthorizeUser, ProtectRoute } from './middleware/auth';
 
 // root routes
 export default function App() {
   return (
     <main>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/username" element={<UserName />} />
@@ -29,7 +30,7 @@ export default function App() {
           <Route path="/reset" element={<Reset />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </main>
   );
 }

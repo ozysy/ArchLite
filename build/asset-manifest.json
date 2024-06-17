@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/ArchLite/static/css/main.816ede9d.css",
+    "main.js": "/ArchLite/static/js/main.8a59bbab.js",
+    "static/media/main.png": "/ArchLite/static/media/main.3b76d551763096035986.png",
+    "static/media/boxicons.svg": "/ArchLite/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
+    "static/media/boxicons.eot": "/ArchLite/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
+    "static/media/boxicons.woff": "/ArchLite/static/media/boxicons.d12afc36557395143e4b.woff",
+    "static/media/boxicons.ttf": "/ArchLite/static/media/boxicons.db9ddb1898dbd76badca.ttf",
+    "static/media/boxicons.woff2": "/ArchLite/static/media/boxicons.df635aaf04cd75132f62.woff2",
+    "static/media/User.png": "/ArchLite/static/media/User.7ffee55110e23f7ae57a.png",
+    "index.html": "/ArchLite/index.html",
+    "main.816ede9d.css.map": "/ArchLite/static/css/main.816ede9d.css.map",
+    "main.8a59bbab.js.map": "/ArchLite/static/js/main.8a59bbab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.816ede9d.css",
+    "static/js/main.8a59bbab.js"
+  ]
+}
