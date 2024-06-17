@@ -1,67 +1,56 @@
-import React from 'react';
+import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-// импорт всех компонентов
-import UserName from './components/UserName';
+
+/** import all components */
+import Username from './components/Username';
 import Password from './components/Password';
 import Register from './components/Register';
 import Profile from './components/Profile';
 import Recovery from './components/Recovery';
 import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
-import Main from './components/Main';
 
-// auth middleware
-import { AuthorizeUser, ProtectRoute } from './middleware/auth';
 
-// root routes
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Main />
-  },
-  {
-    path: '/username',
-    element: <UserName />
-  },
-  {
-    path: '/register',
-    element: <Register />
-  },
-  {
-    path: '/password',
-    element: (
-      <ProtectRoute>
-        <Password />
-      </ProtectRoute>
-    )
-  },
-  {
-    path: '/profile',
-    element: (
-      <AuthorizeUser>
-        <Profile />
-      </AuthorizeUser>
-    )
-  },
-  {
-    path: '/recovery',
-    element: <Recovery />
-  },
-  {
-    path: '/reset',
-    element: <Reset />
-  },
-  {
-    path: '/*',
-    element: <PageNotFound />
-  }
-]);
+/** auth middleware */
+import { AuthorizeUser, ProtectRoute } from './middleware/auth'
+
+/** root routes */
+const router = createHashRouter([
+    {
+        path : '/',
+        element : <Username></Username>
+    },
+    {
+        path : '/register',
+        element : <Register></Register>
+    },
+    {
+        path : '/password',
+        element : <ProtectRoute><Password /></ProtectRoute>
+    },
+    {
+        path : '/profile',
+        element : <AuthorizeUser><Profile /></AuthorizeUser>
+    },
+    {
+        path : '/recovery',
+        element : <Recovery></Recovery>
+    },
+    {
+        path : '/reset',
+        element : <Reset></Reset>
+    },
+    {
+        path : '*',
+        element : <PageNotFound></PageNotFound>
+    },
+])
 
 export default function App() {
   return (
     <main>
-      <RouterProvider router={router} basename="/ArchLite" />
+        <RouterProvider router={router}></RouterProvider>
     </main>
-  );
+  )
 }
