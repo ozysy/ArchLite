@@ -1,0 +1,51 @@
+/* ProjectDetails.css */
+.project-details {
+    padding-top: 20px;
+    background-color: #ffffff;
+    height: 100vh;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; */
+  }
+  
+  .project-details img {
+    max-width: 100%;
+    padding: 20px;
+    height: auto;
+    margin: auto;
+    border-radius: 30px;
+  }
+  
+  .project-details h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    text-align: center; /* Центрируем текст */
+  }
+  
+  .project-details p {
+    font-size: 1rem;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    text-align: center; /* Центрируем текст */
+    padding-top: 1rem;
+    width: 67vw;
+    margin: auto;
+    text-align: justify; /* Выравниваем текст по ширине */
+  }
+  @media(max-width: 768px) {
+    /* Применяем стили только для устройств с максимальной шириной 768px */
+    .project-details h1 {
+        font-size: 1.5rem;
+    }
+
+    .project-details p {
+        font-size: 0.9rem;
+        width: 95%;
+    }
+}

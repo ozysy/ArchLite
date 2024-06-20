@@ -39,12 +39,12 @@ const Header = () => {
         <header className="header">
             <div className="logo">
                 <img src="../img/logo.png" alt="Logo" />
-                <span className="brand-name">Архи лайт</span>
+                {/* <span className="brand-name">Архи лайт</span> */}
             </div>
             <nav className={`navbar ${isActive ? 'active' : ''}`}>
                 <Link to="/" className="nav-link" onClick={handleNavLinkClick}>О нас</Link>
                 <Link to="/Product" className="nav-link" onClick={handleNavLinkClick}>Продукты</Link>
-                <Link to="/contacts" className="nav-link" onClick={handleNavLinkClick}>Контакты</Link>
+                <Link to="/Contacts" className="nav-link" onClick={handleNavLinkClick}>Контакты</Link>
                 <div className="nav-underline"></div>
             </nav>
             <div className="user-menu">

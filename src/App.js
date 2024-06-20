@@ -11,6 +11,8 @@ import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
 import Main from './components/Main';
 import Product from './components/Product';
+import ProjectDetails from './components/ProjectDetails';
+import Contacts from './components/Contacts';
 
 // auth middleware
 import { AuthorizeUser, ProtectRoute } from './middleware/auth';
@@ -29,6 +31,8 @@ export default function App() {
           <Route path="/profile" element={<AuthorizeUser><Profile /></AuthorizeUser>} />
           <Route path="/recovery" element={<Recovery />} />
           <Route path="/reset" element={<Reset />} />
+          <Route path="/projects/:id" element={<ProjectDetails />} />
+          <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </HashRouter>
