@@ -27,11 +27,11 @@ const Map = () => {
         loadScript('https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=e367c6e8-3da6-407e-9b16-2387dc14e672', () => {
             window.ymaps.ready(() => {
                 const map = new window.ymaps.Map("map", {
-                    center: [51.53, 46.02], // Координаты центра карты
-                    zoom: 12 // Масштаб карты
+                    center: [51.529371, 46.027717], // Координаты центра карты
+                    zoom: 16 // Масштаб карты
                 });
 
-                const placemark = new window.ymaps.Placemark([51.53, 46.02], {
+                const placemark = new window.ymaps.Placemark([51.529371, 46.027717], {
                     hintContent: "Им. Сакко и Ванцетти улица, 27, Саратов",
                     balloonContent: "Им. Сакко и Ванцетти улица, 27, Саратов"
                 });
