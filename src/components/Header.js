@@ -42,7 +42,7 @@ const Header = () => {
                 <span className="brand-name">Архи лайт</span>
             </div>
             <nav className={`navbar ${isActive ? 'active' : ''}`}>
-                <a href="/" className="nav-link" onClick={handleNavLinkClick}>О нас</a>
+                <a href="/Main" className="nav-link" onClick={handleNavLinkClick}>О нас</a>
                 <a href="/projects" className="nav-link" onClick={handleNavLinkClick}>Проекты</a>
                 <a href="/contacts" className="nav-link" onClick={handleNavLinkClick}>Контакты</a>
                 <div className="nav-underline"></div>
