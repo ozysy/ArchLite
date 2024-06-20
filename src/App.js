@@ -22,7 +22,7 @@ export default function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/Product" element={<Product />} />
+          <Route path="/product" element={<Product />} />
           <Route path="/username" element={<UserName />} />
           <Route path="/register" element={<Register />} />
           <Route path="/password" element={<ProtectRoute><Password /></ProtectRoute>} />
