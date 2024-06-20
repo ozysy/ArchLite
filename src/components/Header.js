@@ -43,12 +43,12 @@ const Header = () => {
             </div>
             <nav className={`navbar ${isActive ? 'active' : ''}`}>
                 <Link to="/" className="nav-link" onClick={handleNavLinkClick}>О нас</Link>
-                <Link to="/#Product" className="nav-link" onClick={handleNavLinkClick}>Продукты</Link>
-                <Link to="/#contacts" className="nav-link" onClick={handleNavLinkClick}>Контакты</Link>
+                <Link to="/Product" className="nav-link" onClick={handleNavLinkClick}>Продукты</Link>
+                <Link to="/contacts" className="nav-link" onClick={handleNavLinkClick}>Контакты</Link>
                 <div className="nav-underline"></div>
             </nav>
             <div className="user-menu">
-                <Link to="/#UserName" className="user-icon">
+                <Link to="/UserName" className="user-icon">
                     <i className='bx bx-user'></i>
                 </Link>
                 <button className="menu-toggle" onClick={handleToggle}>
