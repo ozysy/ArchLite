@@ -42,13 +42,13 @@ const Header = () => {
                 <span className="brand-name">Архи лайт</span>
             </div>
             <nav className={`navbar ${isActive ? 'active' : ''}`}>
-                <Link to="/" className="nav-link" onClick={handleNavLinkClick}>О нас</Link>
-                <Link to="/#/Product" className="nav-link" onClick={handleNavLinkClick}>Продукты</Link>
-                <Link to="/#/contacts" className="nav-link" onClick={handleNavLinkClick}>Контакты</Link>
-                {/* <div className="nav-underline"></div> */}
+                <a href="/" className="nav-link" onClick={handleNavLinkClick}>О нас</a>
+                <a href="/Product" className="nav-link" onClick={handleNavLinkClick}>Проекты</a>
+                <a href="/contacts" className="nav-link" onClick={handleNavLinkClick}>Контакты</a>
+                <div className="nav-underline"></div>
             </nav>
             <div className="user-menu">
-                <Link to="/#/UserName" className="user-icon">
+                <Link to="/UserName" className="user-icon">
                     <i className='bx bx-user'></i>
                 </Link>
                 <button className="menu-toggle" onClick={handleToggle}>
