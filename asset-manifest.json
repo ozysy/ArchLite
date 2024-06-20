@@ -1,25 +1,31 @@
 {
   "files": {
-    "main.css": "/ArchLite/static/css/main.7bae6dc8.css",
-    "main.js": "/ArchLite/static/js/main.48686812.js",
+    "main.css": "/ArchLite/static/css/main.ad78a27b.css",
+    "main.js": "/ArchLite/static/js/main.9c87870d.js",
     "static/media/main.png": "/ArchLite/static/media/main.3b76d551763096035986.png",
     "static/media/slide2.png": "/ArchLite/static/media/slide2.0a05119489dabbde0b4f.png",
+    "static/media/villa.png": "/ArchLite/static/media/villa.4b62d09262358812e5f0.png",
     "static/media/slide4.png": "/ArchLite/static/media/slide4.e103eb512d5ad11bcbda.png",
     "static/media/slide5.png": "/ArchLite/static/media/slide5.0d300813d63ac28234ef.png",
     "static/media/slide1.png": "/ArchLite/static/media/slide1.ed6e03233c79de39171d.png",
     "static/media/slide3.png": "/ArchLite/static/media/slide3.49ed65dd659e6dc48a4d.png",
+    "static/media/interior1.png": "/ArchLite/static/media/interior1.6050b313319cd42db18e.png",
+    "static/media/office1.png": "/ArchLite/static/media/office1.0bb563daa5a245ab4c35.png",
+    "static/media/mall.png": "/ArchLite/static/media/mall.e76e4391118edf23359b.png",
+    "static/media/interior2.png": "/ArchLite/static/media/interior2.e6244e8efe23565311ec.png",
     "static/media/boxicons.svg": "/ArchLite/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
+    "static/media/office2.png": "/ArchLite/static/media/office2.418538c7e487fa2f36d3.png",
     "static/media/boxicons.eot": "/ArchLite/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
     "static/media/boxicons.woff": "/ArchLite/static/media/boxicons.d12afc36557395143e4b.woff",
     "static/media/boxicons.ttf": "/ArchLite/static/media/boxicons.db9ddb1898dbd76badca.ttf",
     "static/media/boxicons.woff2": "/ArchLite/static/media/boxicons.df635aaf04cd75132f62.woff2",
     "static/media/User.png": "/ArchLite/static/media/User.7ffee55110e23f7ae57a.png",
     "index.html": "/ArchLite/index.html",
-    "main.7bae6dc8.css.map": "/ArchLite/static/css/main.7bae6dc8.css.map",
-    "main.48686812.js.map": "/ArchLite/static/js/main.48686812.js.map"
+    "main.ad78a27b.css.map": "/ArchLite/static/css/main.ad78a27b.css.map",
+    "main.9c87870d.js.map": "/ArchLite/static/js/main.9c87870d.js.map"
   },
   "entrypoints": [
-    "static/css/main.7bae6dc8.css",
-    "static/js/main.48686812.js"
+    "static/css/main.ad78a27b.css",
+    "static/js/main.9c87870d.js"
   ]
 }
