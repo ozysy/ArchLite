@@ -10,6 +10,7 @@ import Recovery from './components/Recovery';
 import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
 import Main from './components/Main';
+import Product from './components/Product';
 
 // auth middleware
 import { AuthorizeUser, ProtectRoute } from './middleware/auth';
@@ -21,6 +22,7 @@ export default function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/Product" element={<Product />} />
           <Route path="/username" element={<UserName />} />
           <Route path="/register" element={<Register />} />
           <Route path="/password" element={<ProtectRoute><Password /></ProtectRoute>} />
