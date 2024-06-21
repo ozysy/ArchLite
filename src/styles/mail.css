@@ -1,0 +1,57 @@
+/* styles.css */
+
+.mail-form {
+    max-width: 70.3vw;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 1rem;
+    /* border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9; */
+}
+
+.mail-form input,
+.mail-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.mail-form textarea {
+    height: 150px;
+}
+
+.mail-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.mail-form button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+@media (max-width: 768px) {
+    .mail-form{
+        max-width: 82vw;
+    }
+}

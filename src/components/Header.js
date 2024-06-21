@@ -43,7 +43,7 @@ const Header = () => {
             </div>
             <nav className={`navbar ${isActive ? 'active' : ''}`}>
                 <Link to="/" className="nav-link" onClick={handleNavLinkClick}>О нас</Link>
-                <Link to="/Product" className="nav-link" onClick={handleNavLinkClick}>Продукты</Link>
+                <Link to="/Product" className="nav-link" onClick={handleNavLinkClick}>Проекты</Link>
                 <Link to="/Contacts" className="nav-link" onClick={handleNavLinkClick}>Контакты</Link>
                 <div className="nav-underline"></div>
             </nav>

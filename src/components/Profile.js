@@ -66,11 +66,10 @@ export default function Profile() {
 
     return (
         <div className="container mx-auto">
-
             <Toaster position='top-center' reverseOrder={false}></Toaster>
 
             <div className='flex justify-center items-center h-screen'>
-            <div className={`${styles.glass} ${extend.glass}`} style={{ width: "45%", paddingTop: '3em'}}>
+                <div className={`${styles.glass} ${extend.glass} sm:w-3/4 md:w-1/2 lg:w-1/3`} style={{ paddingTop: '3em'}}>
                     
                     <div className="title flex flex-col items-center">
                         <h4 className='text-5xl fotn-bold'>Профиль</h4>
@@ -80,37 +79,35 @@ export default function Profile() {
                     </div>
 
                     <form className='py-1' onSubmit={formik.handleSubmit}>
-                    <div className='profile flex justify-center py-4'>
-                  <label htmlFor="profile">
-                  <img src={apiData?.profile || file || avatar} className={`${styles.profile_img} ${extend.profile_img}`} alt="avatar" />
-                  </label>
-                  
-                  <input onChange={onUpload} type="file" id='profile' name='profile' />
-              </div>
+                        <div className='profile flex justify-center py-4'>
+                            <label htmlFor="profile">
+                                <img src={avatar} className={`${styles.profile_img} ${extend.profile_img}`} alt="avatar" />
+                            </label>
+                            <input onChange={onUpload} type="file" id='profile' name='profile' />
+                        </div>
 
-                <div className="textbox flex flex-col items-center gap-6">
-                    <div className="name flex w-3/4 gap-10">
-                        <input {...formik.getFieldProps('firstName')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Имя' />
-                        <input {...formik.getFieldProps('lastName')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Фамилия' />
-                     </div>
+                        <div className="textbox flex flex-col items-center gap-6">
+                            <div className="name flex w-full sm:flex-row sm:w-3/4 gap-10">
+                                <input {...formik.getFieldProps('firstName')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Имя' />
+                                <input {...formik.getFieldProps('lastName')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Фамилия' />
+                            </div>
                      
-                     <div className="name flex w-3/4 gap-10">
-                        <input {...formik.getFieldProps('mobile')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='номер телефона' />
-                        <input {...formik.getFieldProps('email')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Email' />
-                    </div>
+                            <div className="name flex w-full sm:flex-row sm:w-3/4 gap-10">
+                                <input {...formik.getFieldProps('mobile')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='номер телефона' />
+                                <input {...formik.getFieldProps('email')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Email' />
+                            </div>
 
-                        <input {...formik.getFieldProps('address')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Адрес' />
-                        <button className={styles.btn} type='submit'>Обновить профиль</button>
-                  
-              </div>
+                            <input {...formik.getFieldProps('address')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Адрес' />
+                            <button className={styles.btn} type='submit'>Обновить профиль</button>
+                        </div>
 
-                           <div className="text-center py-4">
+                        <div className="text-center py-4">
                             <span className='text-gray-500'>Приходите позже <button onClick={userLogout} className='text-red-500' to='/Username'>Выйти</button></span>
-                           </div>
+                        </div>
                     </form>
 
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

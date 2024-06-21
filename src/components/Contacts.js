@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './Header';
 import Info from './Info';
 import Footer from './Footer';
+import Mail from './Mail';
 
 const Contacts = () => {
     return (
@@ -11,6 +12,7 @@ const Contacts = () => {
         <div class="main-content">
             <Info />
         </div>
+            <Mail />
             <Footer />
         </div>
     );

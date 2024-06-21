@@ -29,7 +29,17 @@
 }
 
 
-
+@media  (max-width: 1280px){
+    .main-content {
+        align-items: center;
+        border-radius: 20px;
+        display: flex;
+        flex: 1 1;
+        margin-bottom: 3rem;
+        flex-direction: column;
+        text-align: center;
+    }
+}
 
 @media (max-width: 768px) {
     
