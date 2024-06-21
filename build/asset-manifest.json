@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ArchLite/static/css/main.eda2bdbf.css",
-    "main.js": "/ArchLite/static/js/main.45251606.js",
+    "main.js": "/ArchLite/static/js/main.d7a94bca.js",
     "static/media/main.png": "/ArchLite/static/media/main.3b76d551763096035986.png",
     "static/media/slide2.png": "/ArchLite/static/media/slide2.0a05119489dabbde0b4f.png",
     "static/media/villa.png": "/ArchLite/static/media/villa.4b62d09262358812e5f0.png",
@@ -22,10 +22,10 @@
     "static/media/User.png": "/ArchLite/static/media/User.7ffee55110e23f7ae57a.png",
     "index.html": "/ArchLite/index.html",
     "main.eda2bdbf.css.map": "/ArchLite/static/css/main.eda2bdbf.css.map",
-    "main.45251606.js.map": "/ArchLite/static/js/main.45251606.js.map"
+    "main.d7a94bca.js.map": "/ArchLite/static/js/main.d7a94bca.js.map"
   },
   "entrypoints": [
     "static/css/main.eda2bdbf.css",
-    "static/js/main.45251606.js"
+    "static/js/main.d7a94bca.js"
   ]
 }
