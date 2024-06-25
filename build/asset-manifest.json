@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/ArchLite/static/css/main.eda2bdbf.css",
-    "main.js": "/ArchLite/static/js/main.29b8ae5e.js",
-    "static/media/main.png": "/ArchLite/static/media/main.3b76d551763096035986.png",
+    "main.css": "/ArchLite/static/css/main.8f18c8a8.css",
+    "main.js": "/ArchLite/static/js/main.a02490ff.js",
     "static/media/slide2.png": "/ArchLite/static/media/slide2.0a05119489dabbde0b4f.png",
     "static/media/villa.png": "/ArchLite/static/media/villa.4b62d09262358812e5f0.png",
     "static/media/slide4.png": "/ArchLite/static/media/slide4.e103eb512d5ad11bcbda.png",
@@ -15,17 +14,19 @@
     "static/media/interior2.png": "/ArchLite/static/media/interior2.e6244e8efe23565311ec.png",
     "static/media/boxicons.svg": "/ArchLite/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
     "static/media/office2.png": "/ArchLite/static/media/office2.418538c7e487fa2f36d3.png",
+    "static/media/main.png": "/ArchLite/static/media/main.ceb1cdda9d7a935bba8d.png",
     "static/media/boxicons.eot": "/ArchLite/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
+    "static/media/logo.png": "/ArchLite/static/media/logo.83bf74c8f95de63f6808.png",
     "static/media/boxicons.woff": "/ArchLite/static/media/boxicons.d12afc36557395143e4b.woff",
     "static/media/boxicons.ttf": "/ArchLite/static/media/boxicons.db9ddb1898dbd76badca.ttf",
     "static/media/boxicons.woff2": "/ArchLite/static/media/boxicons.df635aaf04cd75132f62.woff2",
     "static/media/User.png": "/ArchLite/static/media/User.7ffee55110e23f7ae57a.png",
     "index.html": "/ArchLite/index.html",
-    "main.eda2bdbf.css.map": "/ArchLite/static/css/main.eda2bdbf.css.map",
-    "main.29b8ae5e.js.map": "/ArchLite/static/js/main.29b8ae5e.js.map"
+    "main.8f18c8a8.css.map": "/ArchLite/static/css/main.8f18c8a8.css.map",
+    "main.a02490ff.js.map": "/ArchLite/static/js/main.a02490ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.eda2bdbf.css",
-    "static/js/main.29b8ae5e.js"
+    "static/css/main.8f18c8a8.css",
+    "static/js/main.a02490ff.js"
   ]
 }
