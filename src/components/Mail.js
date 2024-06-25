@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/mail.css'
+import '../styles/mail.css';
 
 const Mail = () => {
     const [formData, setFormData] = useState({
@@ -16,7 +16,6 @@ const Mail = () => {
         const fetchUserData = async () => {
             const token = localStorage.getItem('token');
             if (!token) {
-                setMessage('You must be logged in to send a message.');
                 return;
             }
 
@@ -26,14 +25,16 @@ const Mail = () => {
                         'Authorization': `Bearer ${token}`
                     }
                 });
+
                 if (response.ok) {
                     const data = await response.json();
-                    setFormData(prevData => ({
-                        ...prevData,
+                    setFormData({
                         firstName: data.firstName,
                         lastName: data.lastName,
-                        email: data.email
-                    }));
+                        email: data.email,
+                        subject: '',
+                        text: ''
+                    });
                 } else {
                     const error = await response.json();
                     setMessage(`Error: ${error.error}`);
@@ -50,19 +51,18 @@ const Mail = () => {
         e.preventDefault();
 
         const token = localStorage.getItem('token');
+        const headers = {
+            'Content-Type': 'application/json'
+        };
 
-        if (!token) {
-            setMessage('You must be logged in to send a message.');
-            return;
+        if (token) {
+            headers['Authorization'] = `Bearer ${token}`;
         }
 
         try {
             const response = await fetch('http://localhost:8080/api/sendMail', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
-                },
+                headers: headers,
                 body: JSON.stringify({
                     username: `${formData.firstName} ${formData.lastName}`,
                     userEmail: formData.email,
@@ -86,44 +86,47 @@ const Mail = () => {
     return (
         <div className="mail-form">
             <form onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        value={formData.firstName}
-                        onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                        placeholder="Имя"
-                        required
-                    />
-                    <input
-                        type="text"
-                        value={formData.lastName}
-                        onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                        placeholder="Фамилия"
-                        required
-                    />
-                    <input
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="Email"
-                        required
-                    />
-                    <input
-                        type="text"
-                        value={formData.subject}
-                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                        placeholder="Тема"
-                        required
-                    />
-                    <textarea
-                        value={formData.text}
-                        onChange={(e) => setFormData({ ...formData, text: e.target.value })}
-                        placeholder="Сообщение"
-                        required
-                    ></textarea>
-                    <button type="submit">Отправить</button>
-                </form>
+                <input
+                    type="text"
+                    value={formData.firstName}
+                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                    placeholder="Имя"
+                    required
+                    disabled={!!localStorage.getItem('token')} // Disable if user is logged in
+                />
+                <input
+                    type="text"
+                    value={formData.lastName}
+                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                    placeholder="Фамилия"
+                    required
+                    disabled={!!localStorage.getItem('token')} // Disable if user is logged in
+                />
+                <input
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    placeholder="Email"
+                    required
+                    disabled={!!localStorage.getItem('token')} // Disable if user is logged in
+                />
+                <input
+                    type="text"
+                    value={formData.subject}
+                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                    placeholder="Тема"
+                    required
+                />
+                <textarea
+                    value={formData.text}
+                    onChange={(e) => setFormData({ ...formData, text: e.target.value })}
+                    placeholder="Сообщение"
+                    required
+                ></textarea>
+                <button type="submit">Отправить</button>
+            </form>
 
-                {message && <p>{message}</p>}
+            {message && <p>{message}</p>}
         </div>
     );
 };

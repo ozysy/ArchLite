@@ -25,6 +25,7 @@ body {
     background-color: white;
     /* border-bottom: 1px solid #ccc; */
     z-index: 1000; /* Добавлено для верхнего слоя */
+    padding-bottom: 3rem; /* Добавляем место для блока */
 }
 
 .logo {
@@ -38,8 +39,9 @@ body {
 
 .brand-name {
     text-decoration: none;
-    color: #1C1C1C;
+    color: #FF6C00;
     font-size: 1.2rem;
+    margin-right: 1rem;
 }
 
 .navbar {
@@ -51,7 +53,7 @@ body {
 
 .nav-underline {
     height: 3px;
-    background-color: orange;
+    background-color: #FF6C00;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -69,7 +71,7 @@ body {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: orange;
+    background-color: #FF6C00;
 }
 
 .nav-link:hover::after {
@@ -113,7 +115,7 @@ body {
     height: 67vh;
     width: 100%;
     margin: auto;
-    padding-top: 1.5rem;
+    padding-top: 2rem;
     padding-bottom: 1.5rem;
     position: relative;
     margin-bottom: 6rem;
@@ -283,6 +285,7 @@ body {
     color: #ffffff;
 }
 
+
 @media screen and (max-width: 900px) {
     .wrapper .carousel {
       grid-auto-columns: calc((100% / 2) - 9px);
@@ -300,11 +303,12 @@ body {
   @media screen and (max-width: 600px) {
     .wrapper{
         height: auto;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+        padding-top: 1rem;
     }
     .wrapper .carousel {
       grid-auto-columns: 100%;
-      height: 51vh;
+      height: 46vh;
     }
     .carousel .card .img img {
         padding-top: 4%;
@@ -366,8 +370,6 @@ body {
         top: 1rem;
     }
 
-   
-
     .filters button {
         width: 100%;
         margin-bottom: 10px;
@@ -426,5 +428,69 @@ body {
 
     .footer p {
         font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    body {
+        font-size: 1.2rem;
+    }
+    .header {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .logo img {
+        height: 100px;
+    }
+    .brand-name {
+        font-size: 2.5rem;
+    }
+    .navbar a {
+        font-size: 2.5rem;
+    }
+    .user-icon {
+        font-size: 3rem;
+    }
+    .wrapper {
+        max-width: 95vw;
+    }
+    .wrapper i {
+        height: 60px;
+        width: 60px;
+        font-size: 2rem;
+        line-height: 60px;
+    }
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 3) - 18px);
+        gap: 24px;
+    }
+    .carousel .card {
+        height: 450px;
+    }
+    .card .img img {
+        width: 35vw;
+        height: 110vh;
+    }
+    .filters button {
+        padding: 10px 30px;
+        font-size: 2rem;
+    }
+    .filters {
+        padding-right: 8rem;
+    }
+    .projects {
+        margin: 2rem;
+        font-size: 2rem;
+    }
+    .project {
+        width: 28%;
+    }
+    .footer {
+        padding: 2rem;
+    }
+    .footer p {
+        font-size: 1.5rem;
     }
 }

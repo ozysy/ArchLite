@@ -49,3 +49,41 @@
         width: 95%;
     }
 }
+@media (min-width: 2560px) {
+  body {
+      font-size: 1.2rem;
+  }
+  .header {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+  .brand-name {
+      font-size: 2.5rem;
+  }
+  .navbar a {
+      font-size: 2.5rem;
+  }
+  .user-icon {
+      font-size: 3rem;
+  }
+  .project-details {
+    padding-top: 5rem;
+  }
+  .project-details img {
+    height: 60vh;
+  }
+  .project-details p {
+    font-size: 2rem;
+  }
+  .project-details h1 {
+    font-size: 3rem;
+  }
+  .footer {
+    padding: 2rem;
+  }
+  .footer p {
+    font-size: 1.5rem;
+  }
+}

@@ -4,7 +4,8 @@ import avatar from '../assets/User.png';
 import { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import{ usernameValidate } from '../helper/validate';
-import { useAuthStore } from '../store/store'
+import { useAuthStore } from '../store/store';
+import Header from './Header';
 
 import styles from '../styles/UserName.module.css';
 
@@ -34,6 +35,8 @@ export default function Username() {
     })
 
     return (
+        <div>
+            <Header />
         <div className="container mx-auto">
 
             <Toaster position='top-center' reverseOrder={false}></Toaster>
@@ -42,7 +45,7 @@ export default function Username() {
                 <div className={styles.glass}>
                     <div className="title flex flex-col items-center">
                         <h4 className='text-5xl fotn-bold'>Здравствуйте!</h4>
-                        <span className='py-4 text-xl w-2/3 text-center text-gray-500'>
+                        <span className='py-4 text-xl w-3/3 text-center text-gray-500'>
                         Узнайте больше, присоединившись к нам.
                         </span>
                     </div>
@@ -64,6 +67,7 @@ export default function Username() {
 
                 </div>
             </div>
+        </div>
         </div>
     )
 }

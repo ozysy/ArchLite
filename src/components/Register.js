@@ -5,7 +5,8 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import{ registerValidation } from '../helper/validate';
 import convertToBase64 from '../helper/convert';
-import { registerUser } from '../helper/helper'
+import { registerUser } from '../helper/helper';
+import Header from './Header';
 
 
 import styles from '../styles/UserName.module.css';
@@ -47,12 +48,14 @@ const onUpload = async e => {
 }
 
     return (
-        <div className="container mx-auto">
+        <div>
+            <Header />
+        <div className="container mx-auto padding-top-20vh">
 
             <Toaster position='top-center' reverseOrder={false}></Toaster>
 
-            <div className='flex justify-center items-center h-screen'>
-                <div className={styles.glass} style={{width: "45%", passingTop: '3em'}}>
+            <div className='flex justify-center items-center h-95vh'>
+                <div className={styles.glass} style={{width: "45%", passingTop: '3rem'}}>
                     
                     <div className="title flex flex-col items-center">
                         <h4 className='text-5xl fotn-bold'>Регистрация</h4>
@@ -84,6 +87,7 @@ const onUpload = async e => {
 
                 </div>
             </div>
+        </div>
         </div>
     )
 }

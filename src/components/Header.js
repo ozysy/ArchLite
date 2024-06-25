@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/main.css';
 import 'boxicons/css/boxicons.min.css';
+import Logo from '../img/logo.png';
 
 const Header = () => {
     const [isActive, setIsActive] = useState(false);
@@ -38,8 +39,8 @@ const Header = () => {
     return (
         <header className="header">
             <div className="logo">
-                <img src="../img/logo.png" alt="Logo" />
-                {/* <span className="brand-name">Архи лайт</span> */}
+                <img src={Logo} alt="Logo" />
+                <span className="brand-name">Архитектурная мастерская</span>
             </div>
             <nav className={`navbar ${isActive ? 'active' : ''}`}>
                 <Link to="/" className="nav-link" onClick={handleNavLinkClick}>О нас</Link>
@@ -55,6 +56,7 @@ const Header = () => {
                     <i className='bx bx-menu'></i>
                 </button>
             </div>
+            {/* <div class='block'><p>Рандомный текст</p></div>   */}
         </header>
     );
 };

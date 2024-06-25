@@ -8,6 +8,7 @@ import convertToBase64 from '../helper/convert';
 import useFetch from '../hooks/fetch.hook';
 import { updateUser } from '../helper/helper';
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 
 import styles from '../styles/UserName.module.css';
 import extend from '../styles/profile.model.css'
@@ -58,22 +59,24 @@ export default function Profile() {
     //ручной выход
     function userLogout(){
         localStorage.removeItem('token');
-        navigate('/Username');
+        navigate('/');
     }
 
     if(isLoading) return <h1 className='text-2xl font-bold'>isLoading</h1>;
     if(serverError) return <h1 className='text-xl text-red-500'>{serverError.massage}</h1>
 
     return (
+        <div>
+            <Header />
         <div className="container mx-auto">
-            <Toaster position='top-center' reverseOrder={false}></Toaster>
+            <Toaster position='center' reverseOrder={false}></Toaster>
 
             <div className='flex justify-center items-center h-screen'>
                 <div className={`${styles.glass} ${extend.glass} sm:w-3/4 md:w-1/2 lg:w-1/3`} style={{ paddingTop: '3em'}}>
                     
                     <div className="title flex flex-col items-center">
                         <h4 className='text-5xl fotn-bold'>Профиль</h4>
-                        <span className='py-4 text-xl w-2/3 text-center text-gray-500'>
+                        <span className='py-4 text-xl w-3/3 text-center text-gray-500'>
                             Вы можете обновить свои данные.
                         </span>
                     </div>
@@ -102,12 +105,13 @@ export default function Profile() {
                         </div>
 
                         <div className="text-center py-4">
-                            <span className='text-gray-500'>Приходите позже <button onClick={userLogout} className='text-red-500' to='/Username'>Выйти</button></span>
+                            <span className='text-gray-500'>Приходите позже <button onClick={userLogout} className='text-red-500' to='/'>Выйти</button></span>
                         </div>
                     </form>
 
                 </div>
             </div>
+        </div>
         </div>
     );
 };

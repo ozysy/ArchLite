@@ -7,6 +7,7 @@ import { passwordValidate } from '../helper/validate'
 import useFetch from '../hooks/fetch.hook';
 import { useAuthStore } from '../store/store';
 import { verifyPassword } from '../helper/helper';
+import Header from './Header';
 
 
 import styles from '../styles/UserName.module.css';
@@ -47,6 +48,8 @@ export default function Password() {
     if(serverError) return <h1 className='text-xl text-red-500'>{serverError.massage}</h1>
 
     return (
+        <div>
+            <Header />
         <div className="container mx-auto">
 
             <Toaster position='top-center' reverseOrder={false}></Toaster>
@@ -54,8 +57,8 @@ export default function Password() {
             <div className='flex justify-center items-center h-screen'>
                 <div className={styles.glass}>
                     <div className="title flex flex-col items-center">
-                        <h4 className='text-5xl fotn-bold'>Здравствуйте {apiData?.fisrstName || apiData?.username}</h4>
-                        <span className='py-4 text-xl w-2/3 text-center text-gray-500'>
+                        <h4 className='text-2xl fotn-bold '>Здравствуйте {apiData?.fisrstName || apiData?.username}</h4>
+                        <span className='py-4 text-xl w-3/3 text-center text-gray-500'>
                         Узнайте больше, связавшись с нами.
                         </span>
                     </div>
@@ -71,12 +74,14 @@ export default function Password() {
               </div>
 
                            <div className="text-center py-4">
-                            <span className='text-gray-500'>Забыли пароль? <Link className='text-red-500' to='/recovery'>восстановить пароль</Link></span>
+                            <span className='text-gray-500'>Забыли пароль?</span>
+                            <p><Link className='text-red-500' to='/recovery'>восстановить пароль</Link></p>
                            </div>
                     </form>
 
                 </div>
             </div>
+        </div>
         </div>
     )
 }

@@ -26,9 +26,13 @@ const Map = () => {
 
         loadScript('https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=e367c6e8-3da6-407e-9b16-2387dc14e672', () => {
             window.ymaps.ready(() => {
+                const is4K = window.innerWidth >= 3840;
+                const zoomLevel = is4K ? 18 : 16; // Устанавливаем больший масштаб для 4K экранов
+
                 const map = new window.ymaps.Map("map", {
                     center: [51.529371, 46.027717], // Координаты центра карты
-                    zoom: 16 // Масштаб карты
+                    // zoom: 16 // Масштаб карты
+                    zoom: zoomLevel // Масштаб карты
                 });
 
                 const placemark = new window.ymaps.Placemark([51.529371, 46.027717], {

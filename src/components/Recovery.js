@@ -3,6 +3,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useAuthStore } from '../store/store';
 import { generateOTP, verifyOTP } from '../helper/helper';
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 
 
 import styles from '../styles/UserName.module.css';
@@ -57,6 +58,8 @@ export default function Recovery() {
     }
 
     return (
+        <div>
+            <Header />
         <div className="container mx-auto">
 
             <Toaster position='top-center' reverseOrder={false}></Toaster>
@@ -64,8 +67,8 @@ export default function Recovery() {
             <div className='flex justify-center items-center h-screen'>
                 <div className={styles.glass}>
                     <div className="title flex flex-col items-center">
-                        <h4 className='text-5xl fotn-bold'>Восстановление пароля</h4>
-                        <span className='py-4 text-xl w-2/3 text-center text-gray-500'>
+                        <h4 className='text-2xl fotn-bold'>Восстановление пароля</h4>
+                        <span className='py-4 text-xl w-3/3 text-center text-gray-500'>
                             Введите код для смены пароля.
                         </span>
                     </div>
@@ -92,6 +95,7 @@ export default function Recovery() {
 
                 </div>
             </div>
+        </div>
         </div>
     )
 }

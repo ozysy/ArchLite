@@ -4,7 +4,7 @@
     box-shadow: 0 4px 30px #4747470b;
     backdrop-filter: blur(7.1px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    height: 85%;
+    /* height: 85%; */
     width: 30%;
     @apply border-4 border-gray-50 shrink-0 h-4/5 w-[30%] rounded-3xl py-20 px-7 min-w-max;
 }
@@ -29,4 +29,31 @@
 
 input[type='file']{
     display: none;
+}
+
+@media (min-width: 2560px) {
+    .glass {
+        width: 20%;
+        padding: 40px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 40px rgba(71, 71, 71, 0.1);
+    }
+
+    .profile_img {
+        width: 180px;
+        border-width: 6px;
+    }
+
+    .textbox {
+        width: 70%;
+        padding: 20px;
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 70%;
+        padding: 20px;
+        font-size: 1.5rem;
+    }
 }

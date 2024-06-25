@@ -99,3 +99,26 @@
         font-size: 0.8rem;
     }
 }
+@media (min-width: 2560px) {
+    .main-content {
+        height: 85vh;
+        padding: 40px;
+        padding-top: 6rem;
+    }
+
+    .main-content p {
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+
+    .main-content h1 {
+        margin-bottom: 4rem;
+        font-size: 4rem;
+    }
+
+    .map-container {
+        width: 80vw;
+        /* height: 70vh; */
+        padding-left: 5vw;
+    }
+}

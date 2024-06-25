@@ -55,3 +55,37 @@
         max-width: 82vw;
     }
 }
+@media (min-width: 2560px) {
+    .mail-form {
+        max-width: 60vw;
+        padding: 40px;
+    }
+
+    .mail-form input,
+    .mail-form textarea {
+        padding: 16px;
+        font-size: 24px;
+        border-radius: 5px;
+    }
+
+    .mail-form textarea {
+        height: 300px;
+    }
+
+    .mail-form button {
+        padding: 20px 40px;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+
+    .message {
+        margin-top: 20px;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .error,
+    .success {
+        font-size: 20px;
+    }
+}
