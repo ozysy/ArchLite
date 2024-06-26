@@ -125,13 +125,15 @@ body {
     cursor: pointer;
 }
 
-.main-content {
+.main-content-about {
     flex: 1;
     padding: 1rem;
-    max-width: 1200px;
+    max-width: 80vw;
     margin: auto;
     text-align: center;
-    height: 94vh;
+    /* height: 94vh; */
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
 }
 
 .main-image {
@@ -197,6 +199,7 @@ body {
     }
 }
 
+/* Tablets and small desktops */
 @media (max-width: 768px) {
     .navbar {
         display: none;
@@ -239,24 +242,7 @@ body {
     }
 }
 
-/* @media (min-width: 769px) {
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .navbar {
-        flex: 1;
-        display: flex;
-        padding-left: 1rem;
-    }
-    .main-image{
-        height: 80%;
-        width: 100%;
-    }
-} */
-
+/* Mobile devices */
 @media (max-width: 480px) {
     .header {
         flex-direction: row;
@@ -287,5 +273,43 @@ body {
 
     .footer p {
         font-size: 0.8rem;
+    }
+}
+@media (min-width: 2560px) {
+    .header {
+        padding: 1rem 2rem;
+    }
+
+    .logo img {
+        height: 75px;
+    }
+
+    .brand-name,
+    .navbar span,
+    .navbar a {
+        font-size: 1.8rem;
+    }
+
+    .user-icon {
+        font-size: 2.25rem;
+    }
+
+    .main-content-about {
+        max-width: 70vw;
+        /* padding: 2rem; */
+        margin-top: 3rem;
+    }
+
+    .main-image {
+        margin-bottom: 3rem;
+        border-radius: 16px;
+    }
+
+    .footer {
+        padding: 1.5rem;
+    }
+
+    .footer p {
+        font-size: 1.5rem;
     }
 }

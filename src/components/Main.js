@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import MainContent from './MainContent';
+import MainContentAbout from './MainContentAbout';
 import Footer from './Footer';
 import NewsCarousel from './NewsCarousel';
 
@@ -8,7 +8,7 @@ const Main = () => {
     return (
         <div>
             <Header />
-            <MainContent />
+            <MainContentAbout />
             <NewsCarousel />
             <Footer />
         </div>

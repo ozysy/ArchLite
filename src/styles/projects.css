@@ -369,6 +369,12 @@ body {
         right: 1rem;
         top: 1rem;
     }
+    .logo img {
+        background: white;
+    }
+    .brand-name {
+display: none;
+    }
 
     .filters button {
         width: 100%;
@@ -442,7 +448,7 @@ body {
         padding-right: 2rem;
     }
     .logo img {
-        height: 100px;
+        height: 65px;
     }
     .brand-name {
         font-size: 2.5rem;
@@ -475,14 +481,14 @@ body {
     }
     .filters button {
         padding: 10px 30px;
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
     .filters {
-        padding-right: 8rem;
+        padding-right: 5.5rem;
     }
     .projects {
         margin: 2rem;
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
     .project {
         width: 28%;
